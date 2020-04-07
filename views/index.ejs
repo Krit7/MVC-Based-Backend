@@ -1,14 +1,18 @@
 <%- include('./partials/header.ejs') %>
 
 <body>
-
-<% for(let i=0;i<hotels.length;i++) { %>
-    <div>
-        <p><%=hotels[i].name%></p>
-        <a href="/hotel/<%=hotels[i]._id%>"><button class="">Show Details</button></a>
-    </div>
+<% if(hotels.length>0) { %>
+    <% for(let i=0;i<hotels.length;i++) { %>
+        <div>
+            <p><%=hotels[i].name%></p>
+            <a href="/hotel/<%=hotels[i]._id%>"><button class="">Show Details</button></a>
+        </div>
+    <% } %>
 <% } %>
 
+<% else { %>
+    <h1>No Hotel In The Database! Add Some to get Started With</h1>
+<% } %>
 <a href="/hotel/new"><button class="">Add New Hotel</button></a>
 
 <%- include('./partials/footer.ejs') %>
