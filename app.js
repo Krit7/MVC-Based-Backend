@@ -24,14 +24,7 @@ mongoose.connect("mongodb://localhost/hotels", {
     console.log('Successfully Connected To Database')
 );
 
-
-
-
-
-
 app.use(router);
-
-
 
 //Handling Wrong Routes
 app.use((req, res) => {

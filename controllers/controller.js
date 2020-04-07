@@ -4,13 +4,12 @@ const Hotel = require('../models/hotel')
 //Validate Input MiddleWare
 validateInputs = (req, res, next) => {
     const editMode = req.query.edit
-    if (req.body.name || req.body.address || req.body.description || req.body.star || req.body.valetParking || req.body.diningAvailable || req.body.roomsAvailable || req.body.taxiServices) {
+    if (req.body.name && req.body.address && req.body.description && req.body.star && req.body.valetParking && req.body.diningAvailable && req.body.roomsAvailable && req.body.taxiServices) {
         next();
     } else {
         console.log("Fields Cannot be Empty !!! Input Required")
     }
 }
-
 
 //Return All Hotels
 getHotels = (req, res) => {
@@ -18,7 +17,6 @@ getHotels = (req, res) => {
         if (err) {
             console.log(err)
         } else {
-            // SeedDB()
             res.render('index', {
                 hotels: gethotels,
                 pageTitle: 'Hotels'
@@ -78,8 +76,6 @@ addHotel = (req, res) => {
         }
     })
 };
-
-
 
 //Edit Hotel by ID
 editHotel = (req, res) => {
