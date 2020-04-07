@@ -1,0 +1,14 @@
+<%- include('./partials/header.ejs') %>
+
+<body>
+
+<% for(let i=0;i<hotels.length;i++) { %>
+    <div>
+        <p><%=hotels[i].name%></p>
+        <a href="/hotel/<%=hotels[i]._id%>"><button class="">Show Details</button></a>
+    </div>
+<% } %>
+
+<a href="/hotel/new"><button class="">Add New Hotel</button></a>
+
+<%- include('./partials/footer.ejs') %>

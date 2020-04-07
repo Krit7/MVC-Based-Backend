@@ -1,0 +1,13 @@
+<%- include('./partials/header.ejs') %>
+
+<body>
+
+<h1><%=hotel.name%></h1>
+
+<a href="/edit/<%=hotel._id%>?edit=true"><button class="">Edit</button></a>
+
+<form action="/delete/<%=hotel._id%>" method="POST">
+    <button class="">Delete</button>
+</form>
+
+<%- include('./partials/footer.ejs') %>

@@ -1,0 +1,58 @@
+<%- include('./partials/header.ejs') %>
+
+<body>
+<form action="/hotel/new" method="POST">
+    <div>
+        <label>Hotel Name</label>
+        <input type="text" placeholder="Hotel Name" name="name">
+    </div>
+    <div>
+        <label>Hotel Address</label>
+        <input type="text" placeholder="Address" name="address">
+    </div>
+    <div>
+        <label>Stars</label>
+        <input type="number" placeholder="1" name="star" min="1" max="5">
+    </div>
+    <div>
+        <label>Description</label>
+        <input type="text" placeholder="Description" name="description">
+    </div>
+
+    <div>
+        <label>Valet Parking</label>
+        <input type="radio" id="Yes" name="valetParking" value="Yes">
+        <label for="Yes">Yes</label><br>
+        <input type="radio" id="No" name="valetParking" value="No">
+        <label for="No">No</label><br>
+    </div>
+    
+    <div>
+        <label>Dining Area</label>
+        <input type="radio" id="Yes" name="diningAvailable" value="Yes">
+        <label for="Yes">Yes</label><br>
+        <input type="radio" id="No" name="diningAvailable" value="No">
+        <label for="No">No</label><br>
+    </div>
+
+    <div>
+        <label>Room Availability</label>
+        <input type="radio" id="Yes" name="roomsAvailable" value="Yes">
+        <label for="Yes">Yes</label><br>
+        <input type="radio" id="No" name="roomsAvailable" value="No">
+        <label for="No">No</label><br>
+    </div>
+
+    <div>
+        <label>Taxi Service</label>
+        <input type="radio" id="Yes" name="taxiServices" value="Yes">
+        <label for="Yes">Yes</label><br>
+        <input type="radio" id="No" name="taxiServices" value="No">
+        <label for="No">No</label><br>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+<a href="/"><button class="">Cancel</button></a>
+
+<%- include('./partials/footer.ejs') %>

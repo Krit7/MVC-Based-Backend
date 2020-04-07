@@ -9,12 +9,12 @@ const HotelSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    type: {
+    star: {
         type: Number,
         required: true
     },
     valetParking: {
-        type: Boolean,
+        type: String,
         required: true
     },
     description: {
@@ -22,15 +22,15 @@ const HotelSchema = new mongoose.Schema({
         required: true
     },
     diningAvailable: {
-        type: Boolean,
+        type: String,
         required: true
     },
     roomsAvailable: {
-        type: Boolean,
+        type: String,
         required: true
     },
     taxiServices: {
-        type: Boolean,
+        type: String,
         required: true
     }
 
