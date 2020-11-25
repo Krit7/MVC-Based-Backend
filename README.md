@@ -1,4 +1,4 @@
-# MountyAssignment
+# MVC Based Backend
 This project repository is an assignment created for an Internship. It is a backend project for managing Hotel Information built using CRUDE commands.
 
 #Routes
